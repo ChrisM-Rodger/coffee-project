@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
 
     <style>
@@ -17,40 +18,53 @@
     </style>
 </head>
 <body>
-    <h1>Coffee!</h1>
+<div class="container-fluid">
+    <header class="row">
+        <div class="col-xs-12">
+        <h1>Coffee!</h1>
+        </div>
+    </header>
+<main class="row">
+    <div class="col-xs-9">
+        <div id="test-box">
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>all</option>
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <!--<input id="submit" type="submit" />-->
-        <br>
-    </form>
+        </div>
 
-    <input type="text" name="coffee-input" id="coffee-input" oninput="searches()">
-    <br>
-    <button id="search-result">submit</button>
-
-    <div id="test-box">
-
-    </div>
-
-    <table>
-        <thead>
+        <table>
+            <thead>
             <tr>
                 <th>NAME</th>
                 <th>ROAST</th>
             </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+            </thead>
+            <tbody id="coffees"></tbody>
+        </table>
+    </div>
+    <div class="col-xs-3">
+        <form>
+            <label for="roast-selection"></label>
+            <select id="roast-selection">
+                <option>all</option>
+                <option>light</option>
+                <option>medium</option>
+                <option>dark</option>
+            </select>
+            <!--<input id="submit" type="submit" />-->
+            <br>
+        </form>
+    <input type="text" name="coffee-input" id="coffee-input" oninput="searches()">
+    <br>
+    <button id="search-result">submit</button>
 
 
-
-    <script src="main.js"></script>
+    </div>
+</main>
+    <div class="row">
+        <div class="col-xs-12"><h1>hey there</h1></div>
+    </div>
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="main.js"></script>
 </body>
 </html>
