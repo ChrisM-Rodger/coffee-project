@@ -43,13 +43,13 @@ function updateCoffees(e) {
 
 function searches() {
     var coffeeType = coffeeValues.value;
-    var searchedCoffees = Array.from(coffees.name);
+    var searchedCoffees = [];
     coffees.forEach(function (coffee) {
         // for (var i = 0; i < coffee.name.length; i++) {
         //     coffee.name[i].split("");
         //   if (coffeeValues.includes)
         // }
-        if (coffee.name === coffeeType) {
+        if (coffee.name.includes(coffeeType)) {
             searchedCoffees.push(coffee);
 
         }
