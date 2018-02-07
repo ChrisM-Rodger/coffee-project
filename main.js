@@ -1,11 +1,15 @@
 "use strict";
 
 function renderCoffee(coffee) {
-    var html = '<tr class="coffee">';
-    html += '<td>' + coffee.name + '</td>';
-    html += '<td>' + coffee.roast + '</td>';
-    html += '</tr>';
+    // var html = '<tr class="coffee">';
+    // html += '<td>' + coffee.name + '</td>';
+    // html += '<td>' + coffee.roast + '</td>';
+    // html += '</tr>';
+    //
+    // return html;
 
+    var html = "";
+    html += '<div>' + '<span>' + coffee.name + '</span>' + ' ' + '<span>' + coffee.roast + '</span>' + '</div>'
     return html;
 }
 
@@ -46,11 +50,11 @@ function searches() {
     var coffeeType = coffeeValues.value;
     var searchedCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.name.includes(coffeeType)){
+        if (coffee.name.toLowerCase().includes(coffeeType.toLowerCase())){
             searchedCoffees.push(coffee);
         }
     });
-    testBody.innerHTML = renderCoffees(searchedCoffees);
+    tbody.innerHTML = renderCoffees(searchedCoffees);
     console.log(searchedCoffees);
 }
 
@@ -78,7 +82,6 @@ var tbody = document.querySelector('#coffees');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeValues = document.getElementById("coffee-input");
 var searchSubmit = document.getElementById("search-result");
-var testBody = document.getElementById('test-box');
 var light = document.getElementById('light');
 
 tbody.innerHTML = renderCoffees(coffees);
