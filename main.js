@@ -49,13 +49,13 @@ function searches() {
         if (coffee.name === coffeeType) {
             searchedCoffees.push(coffee);
 
-        } if (searchedCoffees.length === 0) {
-        testBody.innerHTML = "That is not a coffee we have";
-    }
+        }
+        console.log(typeof coffee.name);
+
     });
     testBody.innerHTML = testRenderCoffeeSearch(searchedCoffees);
 
-    console.log(searchedCoffees);
+
 }
 
 
