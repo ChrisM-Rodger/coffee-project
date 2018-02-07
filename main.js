@@ -2,13 +2,21 @@
 
 function renderCoffee(coffee) {
     var html = '<tr class="coffee">';
-    html += '<td>' + coffee.id + '</td>';
     html += '<td>' + coffee.name + '</td>';
     html += '<td>' + coffee.roast + '</td>';
     html += '</tr>';
 
     return html;
 }
+
+function testRenderCoffeeSearch (coffee) {
+    var results = coffee[0].name + " " + coffee[0].roast + '.';
+    console.log(results);
+    return results;
+
+}
+
+
 
 function renderCoffees(coffees) {
     var html = '';
@@ -26,6 +34,10 @@ function updateCoffees(e) {
         if (coffee.roast === selectedRoast) {
             filteredCoffees.push(coffee);
         }
+        if (selectedRoast === 'all') {
+            filteredCoffees.push(coffee);
+        }
+        console.log(selectedRoast);
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
@@ -38,12 +50,10 @@ function searches() {
             searchedCoffees.push(coffee);
 
         } if (searchedCoffees.length === 0) {
-        tbody.innerHTML = "That is not a coffee we have";
+        testBody.innerHTML = "That is not a coffee we have";
     }
-        // else {
-        // }
     });
-    tbody.innerHTML = renderCoffee(searchedCoffees);
+    testBody.innerHTML = testRenderCoffeeSearch(searchedCoffees);
 
     console.log(searchedCoffees);
 }
@@ -68,12 +78,18 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-var submitButton = document.querySelector('#submit');
+// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeValues = document.getElementById("coffee-input");
 var searchSubmit = document.getElementById("search-result");
+var testBody = document.getElementById('test-box');
+var light = document.getElementById('light');
+
 tbody.innerHTML = renderCoffees(coffees);
 
-submitButton.addEventListener('click', updateCoffees);
+// submitButton.addEventListener('click', updateCoffees);
 searchSubmit.addEventListener('click', searches);
+roastSelection.addEventListener('input', updateCoffees);
+// light.addEventListener('click', updateCoffees);
+
 
