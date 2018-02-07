@@ -21,11 +21,12 @@
     <div class="container-fluid">
             <header class="row">
                 <div class="col-xs-12">
-                <h1>Coffee!</h1>
+                    <h1>Coffee!</h1>
                 </div>
             </header>
+        <hr>
         <main class="row">
-            <div class="col-xs-9" id="coffees">
+            <div class="col-xs-6 leftSidePadding" id="coffees">
 
                 <!--<table>-->
                     <!--<thead>-->
@@ -37,12 +38,12 @@
                     <!--<tbody id="coffees"></tbody>-->
                 <!--</table>-->
             </div>
-            <div class="col-xs-3">
+            <div class="col-xs-6 rightSidePadding">
                 <div class="row">
                     <div class="col-xs-12">
                         <form>
                             <label for="roast-selection">ROAST</label><br>
-                            <select id="roast-selection">
+                            <select id="roast-selection" class="fullLength bottomMargin">
                                 <option>all</option>
                                 <option>light</option>
                                 <option>medium</option>
@@ -51,18 +52,18 @@
                             <!--<input id="submit" type="submit" />-->
                             <br>
                         </form>
-                        <label for="coffee-input">Coffee Name<br><input type="text" name="coffee-input" id="coffee-input" oninput="searches()">
+                        <label for="coffee-input" class="fullLength">Coffee Name<br><input type="text" name="coffee-input" id="coffee-input" oninput="searches()" class="fullLength bottomMargin">
                         </label>
                         <br>
-                        <button id="search-result">submit</button>
+                        <button id="search-result" class="fullLength">submit</button>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
-                        <h1>Add A Coffee</h1>
+                        <h1 class="text-center">Add A Coffee</h1>
                         <form>
                             <label for="add-roast-selection">ROAST</label><br>
-                            <select id="add-roast-selection">
+                            <select id="add-roast-selection" class="fullLength bottomMargin">
                                 <option>all</option>
                                 <option>light</option>
                                 <option>medium</option>
@@ -71,17 +72,17 @@
                             <!--<input id="submit" type="submit" />-->
                             <br>
                         </form>
-                        <label for="add-coffee-input">Coffee Name<br><input type="text" name="add-coffee-input" id="add-coffee-input" oninput="searches()">
+                        <label for="add-coffee-input" class="fullLength">Coffee Name<br><input type="text" name="add-coffee-input" id="add-coffee-input" oninput="searches()" class="fullLength bottomMargin">
                         </label>
                         <br>
-                        <button id="add-search-result">submit</button>
+                        <button id="add-search-result" class="fullLength">submit</button>
                     </div>
                 </div>
             </div>
         </main>
-        <div class="row">
+        <footer class="row">
             <div class="col-xs-12"><h1>Footer Placeholder</h1></div>
-        </div>
+        </footer>
     </div>
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

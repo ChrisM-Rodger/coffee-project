@@ -11,3 +11,43 @@ td, th {
 header {
     background-color: gray;
 }
+
+header>div>h1 {
+    text-align: center;
+}
+
+footer>div>h1 {
+    text-align: center;
+}
+
+.coffeeName {
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.coffeeRoast {
+    color: #8c8c8c;
+    font-size: 1.25em;
+}
+
+.fullLength {
+    width: 100%;
+}
+
+button {
+    border-radius: 50px;
+    background-color: #5bc0de;
+    color: white;
+}
+
+.bottomMargin {
+    margin-bottom: 15px;
+}
+
+.rightSidePadding {
+    padding-right: 70px;
+}
+
+.leftSidePadding {
+    padding-left: 70px;
+}

@@ -9,7 +9,7 @@ function renderCoffee(coffee) {
     // return html;
 
     var html = "";
-    html += '<div>' + '<span>' + coffee.name + '</span>' + ' ' + '<span>' + coffee.roast + '</span>' + '</div>'
+    html += '<div class="col-xs-6">' + '<span style="margin-right: 5px" class="coffeeName">' + coffee.name + '</span>' + ' ' + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>'
     return html;
 }
 
