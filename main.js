@@ -10,7 +10,7 @@ function renderCoffee(coffee) {
 }
 
 function testRenderCoffeeSearch(coffee) {
-    var results = coffee[0].name + " " + coffee[0].roast + '.';
+    var results = coffee.name + " " + coffee.roast + '.';
     console.log(results);
     return results;
 
@@ -45,20 +45,12 @@ function searches() {
     var coffeeType = coffeeValues.value;
     var searchedCoffees = [];
     coffees.forEach(function (coffee) {
-        // for (var i = 0; i < coffee.name.length; i++) {
-        //     coffee.name[i].split("");
-        //   if (coffeeValues.includes)
-        // }
-        if (coffee.name.includes(coffeeType)) {
+        if (coffee.name.includes(coffeeType)){
             searchedCoffees.push(coffee);
-
         }
-        console.log(searchedCoffees);
-
     });
     testBody.innerHTML = testRenderCoffeeSearch(searchedCoffees);
-
-
+    console.log(searchedCoffees);
 }
 
 
