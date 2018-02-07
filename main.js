@@ -10,10 +10,11 @@ function renderCoffee(coffee) {
 }
 
 function testRenderCoffeeSearch(coffee) {
-    var results = coffee.name + " " + coffee.roast + '.';
-    console.log(results);
-    return results;
+    var franky= "";
+    franky += coffee.name;
+    franky += coffee.roast;
 
+    return franky;
 }
 
 
@@ -49,7 +50,7 @@ function searches() {
             searchedCoffees.push(coffee);
         }
     });
-    testBody.innerHTML = testRenderCoffeeSearch(searchedCoffees);
+    testBody.innerHTML = renderCoffees(searchedCoffees);
     console.log(searchedCoffees);
 }
 
