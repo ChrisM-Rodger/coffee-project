@@ -6,7 +6,7 @@
 function renderCoffee(coffee) {
 
     var html = "";
-    html += '<div class="col-xs-6">' + '<span style="margin-right: 5px" class="coffeeName">' + coffee.name + '</span>' + ' ' + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>'
+    html += '<div class="col-xs-4 col-xs-offset-4 col-md-6 col-md-offset-0">' + '<span style="margin-right: 5px" class="coffeeName">' + coffee.name + '</span>' + ' ' + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>'
     return html;
 }
 
@@ -38,10 +38,15 @@ function updateCoffees() {
 function addCoffee() {
     var selectedRoast = addRoastType.value;
     var coffeeType = addCoffeeName.value;
-    coffees.push({id:coffees.length + 1, name:coffeeType, roast:selectedRoast});
+
+    if (coffeeType === "") {
+
+    } else {
+        coffees.push({id: coffees.length + 1, name: coffeeType, roast: selectedRoast});
+
+    }
 
     tbody.innerHTML = renderCoffees(coffees);
-    console.log(coffees);
 }
 
 
@@ -64,11 +69,9 @@ var coffees = [
 ];
 
 var tbody = document.querySelector('#coffees');
-// var submitButton = document.querySelector('#submit');
 var roastSelection = document.querySelector('#roast-selection');
 var coffeeValues = document.getElementById("coffee-input");
 var searchSubmit = document.getElementById("search-result");
-var light = document.getElementById('light');
 var addRoastType = document.getElementById("add-roast-selection");
 var addCoffeeName = document.getElementById("add-coffee-input");
 var addSubmitButton = document.getElementById("add-search-result");
@@ -76,9 +79,6 @@ var addSubmitButton = document.getElementById("add-search-result");
 
 tbody.innerHTML = renderCoffees(coffees);
 
-// submitButton.addEventListener('click', updateCoffees);
 searchSubmit.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
-// light.addEventListener('click', updateCoffees);
 addSubmitButton.addEventListener('click', addCoffee);
-

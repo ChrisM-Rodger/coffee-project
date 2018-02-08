@@ -1,3 +1,9 @@
+header {
+    background-image: url("banner.jpg");
+    background-size: cover;
+    height: 400px;
+}
+
 table {
     border-collapse: collapse;
     margin: 15px 0;
@@ -14,6 +20,8 @@ header {
 
 header>div>h1 {
     text-align: center;
+    color: white;
+    font-size: 4.25em;
 }
 
 footer>div>h1 {
@@ -38,6 +46,10 @@ button {
     border-radius: 50px;
     background-color: #5bc0de;
     color: white;
+}
+
+.curved-border {
+    border-radius: 50px;
 }
 
 .bottomMargin {
