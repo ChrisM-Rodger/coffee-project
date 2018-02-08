@@ -1,26 +1,15 @@
+
+
 "use strict";
 
+
 function renderCoffee(coffee) {
-    // var html = '<tr class="coffee">';
-    // html += '<td>' + coffee.name + '</td>';
-    // html += '<td>' + coffee.roast + '</td>';
-    // html += '</tr>';
-    //
-    // return html;
 
     var html = "";
     html += '<div class="col-xs-6">' + '<span style="margin-right: 5px" class="coffeeName">' + coffee.name + '</span>' + ' ' + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>'
     return html;
 }
 
-function testRenderCoffeeSearch(coffee) {
-    var franky= "";
-    franky += coffee.name;
-    franky += coffee.roast;
-
-    return franky;
-}
-git
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i < coffees.length; i++) {
@@ -29,33 +18,23 @@ function renderCoffees(coffees) {
     return html;
 }
 
-function updateCoffees(e) {
-    e.preventDefault(); // don't submit the form, we just want to update the data
+function updateCoffees() {
+    // e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
+    var coffeeType = coffeeValues.value;
     var filteredCoffees = [];
     coffees.forEach(function (coffee) {
-        if (coffee.roast === selectedRoast) {
+        if ((coffee.roast === selectedRoast) && (coffee.name.toLowerCase().includes(coffeeType.toLowerCase()))) {
             filteredCoffees.push(coffee);
         }
-        if (selectedRoast === 'all') {
+        if ((selectedRoast === 'all') && (coffee.name.toLowerCase().includes(coffeeType.toLowerCase()))) {
             filteredCoffees.push(coffee);
         }
-        console.log(selectedRoast);
+
     });
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-function searches() {
-    var coffeeType = coffeeValues.value;
-    var searchedCoffees = [];
-    coffees.forEach(function (coffee) {
-        if (coffee.name.toLowerCase().includes(coffeeType.toLowerCase())){
-            searchedCoffees.push(coffee);
-        }
-    });
-    tbody.innerHTML = renderCoffees(searchedCoffees);
-    console.log(searchedCoffees);
-}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
@@ -85,7 +64,7 @@ var light = document.getElementById('light');
 tbody.innerHTML = renderCoffees(coffees);
 
 // submitButton.addEventListener('click', updateCoffees);
-searchSubmit.addEventListener('click', searches);
+searchSubmit.addEventListener('click', updateCoffees);
 roastSelection.addEventListener('input', updateCoffees);
 // light.addEventListener('click', updateCoffees);
 
