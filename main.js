@@ -20,8 +20,7 @@ function testRenderCoffeeSearch(coffee) {
 
     return franky;
 }
-
-
+git
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i < coffees.length; i++) {
@@ -57,7 +56,6 @@ function searches() {
     tbody.innerHTML = renderCoffees(searchedCoffees);
     console.log(searchedCoffees);
 }
-
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 var coffees = [
