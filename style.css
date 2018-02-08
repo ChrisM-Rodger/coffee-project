@@ -1,8 +1,29 @@
+
+html body{
+    font-family: 'Indie Flower', cursive;
+}
+
+
 header {
     background-image: url("banner.jpg");
     background-size: cover;
     height: 400px;
+    font-family: 'Sigmar One', cursive;
+    color: white;
+
 }
+
+ul {
+    position: relative;
+    top: 25px;
+}
+
+li {
+    list-style: none;
+    display: inline;
+    font-size: 2em;
+}
+
 
 table {
     border-collapse: collapse;
