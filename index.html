@@ -6,27 +6,16 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Sigmar+One" rel="stylesheet">
-
-    <style>
-        #test-box {
-            height: 150px;
-            width: 200px;
-            margin: 0 auto;
-            background-color: lightgray;
-            color: black;
-            border: 1px solid black;
-        }
-    </style>
 </head>
 <body>
     <div class="container-fluid">
             <header class="row">
                 <div class="col-xs-12">
                     <div class="row">
-                        <div class="col-xs-6">
+                        <div class="col-xs-12 col-md-6">
                             <h1>Scaddin's Coffee House</h1>
                         </div>
-                        <div class="col-xs-6">
+                        <div class="col-xs-12 col-md-6">
                             <ul class="row">
                                 <li class="col-xs-4"><a href="index.html">Home</a></li>
                                 <li class="col-xs-4"><a href="about.html">About</a></li>
@@ -38,17 +27,8 @@
             </header>
         <hr>
         <main class="row">
-            <div class="col-xs-12 col-md-6 leftSidePadding" id="coffees">
+            <div class="col-xs-12 col-md-6 leftSidePadding borderForResults" id="coffees">
 
-                <!--<table>-->
-                    <!--<thead>-->
-                    <!--<tr>-->
-                        <!--<th>NAME</th>-->
-                        <!--<th>ROAST</th>-->
-                    <!--</tr>-->
-                    <!--</thead>-->
-                    <!--<tbody id="coffees"></tbody>-->
-                <!--</table>-->
             </div>
             <div class="col-xs-12 col-md-6 rightSidePadding">
                 <div class="row">
@@ -61,7 +41,6 @@
                                 <option>medium</option>
                                 <option>dark</option>
                             </select>
-                            <!--<input id="submit" type="submit" />-->
                             <br>
                         </form>
                         <label for="coffee-input" class="fullLength">Coffee Name<br><input type="text" name="coffee-input" id="coffee-input" oninput="updateCoffees()" class="fullLength bottomMargin">
@@ -80,7 +59,6 @@
                                 <option>medium</option>
                                 <option>dark</option>
                             </select>
-                            <!--<input id="submit" type="submit" />-->
                             <br>
                         </form>
                         <label for="add-coffee-input" class="fullLength">Coffee Name<br><input type="text" name="add-coffee-input" id="add-coffee-input" class="fullLength bottomMargin">

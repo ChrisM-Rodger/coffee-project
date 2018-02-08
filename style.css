@@ -24,6 +24,13 @@ li {
     font-size: 2em;
 }
 
+.navButtonColor {
+    background-color: #85BDD8;
+    border-radius: 50px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
 
 table {
     border-collapse: collapse;
@@ -83,4 +90,41 @@ button {
 
 .leftSidePadding {
     padding-left: 70px;
+}
+
+li>a:active {
+    color:white;
+}
+
+li>a:hover {
+    color: white;
+}
+
+li>a:link {
+    color:white;
+}
+
+li>a:visited {
+    color: white;
+}
+
+.headerBackground {
+    background-color: #8c8c8c;
+    opacity: .4;
+}
+
+.noOpacity {
+    opacity: 1;
+}
+
+@media screen and (max-width: 992px) {
+    header>div h1 {
+        text-align: center;
+        color: white;
+        font-size: 3.25em;
+    }
+}
+
+.borderForResults {
+    background-color: #ffffee;
 }

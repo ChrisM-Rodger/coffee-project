@@ -6,7 +6,7 @@
 function renderCoffee(coffee) {
 
     var html = "";
-    html += '<div class="col-xs-4 col-xs-offset-4 col-md-6 col-md-offset-0">' + '<span style="margin-right: 5px" class="coffeeName">' + coffee.name + '</span>' + ' ' + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>'
+    html += '<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-0">' + '<span style="margin-right: 5px" class="coffeeName">' + coffee.name + '</span>' + ' ' + '<span class="coffeeRoast">' + coffee.roast + '</span>' + '</div>'
     return html;
 }
 
@@ -42,7 +42,7 @@ function addCoffee() {
     if (coffeeType === "") {
 
     } else {
-        coffees.push({id: coffees.length + 1, name: coffeeType, roast: selectedRoast});
+        coffees.splice(coffees.length, 0, {id: coffees.length + 1, name: coffeeType, roast: selectedRoast});
 
     }
 
