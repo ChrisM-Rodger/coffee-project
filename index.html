@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Sigmar+One" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid">
+    <div id="main-container" class="container-fluid">
             <header class="row">
                 <div class="col-xs-12">
                     <div class="row">
@@ -18,7 +18,7 @@
                         <div class="col-xs-12 col-md-6">
                             <ul class="row">
                                 <li class="col-xs-4"><a href="index.html">Home</a></li>
-                                <li class="col-xs-4"><a href="about.html">About</a></li>
+                                <li class="col-xs-4"><a href="#aboutUsHeader">About</a></li>
                                 <li class="col-xs-4"><a href="#contactlink">Contact</a></li>
                             </ul>
                         </div>
@@ -27,10 +27,10 @@
             </header>
         <hr>
         <main class="row">
-            <div class="col-sm-6 col-md-7 leftSidePadding borderForResults" id="coffees">
+            <div class="col-xs-12 col-sm-6 col-md-7 leftSidePadding borderForResults" id="coffees">
 
             </div>
-            <div class="col-sm-6 col-md-5 rightSidePadding">
+            <div id="searchy" class="col-sm-6 col-md-5 rightSidePadding">
                 <div class="row">
                     <div class="col-xs-12">
                         <form>
@@ -49,7 +49,7 @@
                         <button id="search-result" class="fullLength">submit</button>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row marginTop">
                     <div class="col-xs-12">
                         <h1 class="text-center">Add A Coffee</h1>
                         <form>
@@ -70,6 +70,15 @@
             </div>
         </main>
         <hr>
+        <div class="row"> <h1 class="text-center" id="aboutUsHeader">About Us</h1>
+            <div class="col-sm-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias asperiores
+                consequatur dicta error eum ipsam iure laboriosam magni nam officia porro quae qui quod
+                repudiandae, similique tempore velit vitae.</div>
+            <div class="col-sm-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus alias asperiores
+                consequatur dicta error eum ipsam iure laboriosam magni nam officia porro quae qui quod
+                repudiandae, similique tempore velit vitae.</div>
+        </div>
+        <hr>
         <footer class="row">
             <div class="col-xs-12 text-center">
                 <h3>Hours of Operation:</h3>
@@ -80,6 +89,9 @@
             </div>
         </footer>
     </div>
+
+
+
 <script src="js/jquery-2.2.4.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="main.js"></script>
